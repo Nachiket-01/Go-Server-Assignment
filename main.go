@@ -21,7 +21,7 @@ type ResponseBody struct {
 func main() {
 	http.HandleFunc("/process-single", processSingle)
 	http.HandleFunc("/process-concurrent", processConcurrent)
-//	http.Handle("/", http.FileServer(http.Dir("frontend")))
+	http.Handle("/", http.FileServer(http.Dir("frontend")))
 	http.ListenAndServe(":8000", nil)
 }
 
